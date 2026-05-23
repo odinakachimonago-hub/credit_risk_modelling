@@ -22,7 +22,7 @@ function App() {
       setCustomers(customerData.customers || []);
       setSummary(trainingData);
       if (customerData.customers?.length) setForm(customerData.customers[0]);
-    }).catch(() => setError('Could not connect to backend. Make sure FastAPI is running on port 9002.'));
+    }).catch(() => setError('Could not connect to backend.'));
   }, []);
 
   const selectCustomer = (id) => {
