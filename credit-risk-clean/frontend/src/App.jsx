@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
-const API = 'http://127.0.0.1:9002';
+const API = import.meta.env.VITE_API_URL;
 
 function money(v) { return `£${Number(v || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}`; }
 function pct(v) { return `${(Number(v || 0) * 100).toFixed(1)}%`; }
